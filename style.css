@@ -1,4 +1,60 @@
 body {
    margin: 0;
    background-color: aqua;
+   min-height: 100vh;
+   display: grid;
+   grid-template-columns: 300px 1fr;
+   font-family: 'Inter', sans-serif;
 }
+
+main {
+   grid-column-start: 2;
+}
+
+ul {
+   list-style-type: none;
+   margin: 0;
+   padding: 0;
+}
+
+/* sidebar styles */
+
+.sidebar {
+   grid-column-start: 1;
+   display: flex;
+   flex-direction: column;
+   background: #363740;
+   color: #A4A6B3;
+}
+
+.sidebar i {
+   color: #60626E;
+   margin-right: 1.25rem;
+   margin-left: 0.75rem;
+   min-width: 25px;
+}
+
+.sidebar p {
+   margin: 0;
+}
+
+.sidebar li {
+   display: flex;
+   align-items: center;
+   padding: 1.1rem;
+   font-size: 1.05rem;
+}
+
+.logo-container {
+   padding: 1.25rem;
+   padding-bottom: 1.75rem;
+}
+
+.sidebar-nav {
+   display: flex;
+   flex-direction: column;
+   height: 100%;
+   justify-content: space-between;
+}
+
+/* titlebar styles */
