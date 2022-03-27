@@ -4,7 +4,8 @@ body {
    min-height: 100vh;
    height: 100%;
    display: grid;
-   grid-template-columns: 280px 1fr;
+   /* clamp(280px, 30%, 280px) */
+   grid-template-columns:  clamp(220px, 30%, 280px) 1fr;
    font-family: 'mulish', sans-serif;
 }
 
