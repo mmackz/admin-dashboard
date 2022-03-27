@@ -1,5 +1,7 @@
-*, *::after, *::before {
-  box-sizing: border-box;
+*,
+*::after,
+*::before {
+   box-sizing: border-box;
 }
 
 body {
@@ -9,10 +11,12 @@ body {
    height: 100%;
    display: grid;
    grid-template-columns: clamp(220px, 25%, 280px) 1fr;
-   font-family: 'mulish', sans-serif;
+   font-family: "mulish", sans-serif;
 }
 
-h1, h2, p {
+h1,
+h2,
+p {
    margin: 0;
 }
 
@@ -39,12 +43,12 @@ ul {
    display: flex;
    flex-direction: column;
    background: #363740;
-   color: #A4A6B3;
+   color: #a4a6b3;
    padding-top: 0.35rem;
 }
 
 .sidebar i {
-   color: #60626E;
+   color: #60626e;
    margin-right: 1.25rem;
    margin-left: 0.75rem;
    min-width: 25px;
@@ -54,7 +58,11 @@ ul {
    display: flex;
    align-items: center;
    padding: 1.1rem;
-   font-size: 1.05rem;
+   font-weight: 400;
+}
+
+.sidebar-nav > ul:first-child {
+   padding: 0.5rem 0 0.75rem;
 }
 
 .logo-container {
@@ -78,7 +86,8 @@ header {
    padding: 1rem 0;
 }
 
-header *, header *::after {
+header *,
+header *::after {
    box-sizing: content-box;
 }
 
@@ -107,7 +116,7 @@ header img {
 
 .icons {
    border-right: 2px solid #dfe0eb;
-   margin-right: 1.75rem
+   margin-right: 1.75rem;
 }
 
 .fa-bell {
@@ -168,7 +177,7 @@ header > div {
 @media (max-width: 1080px) {
    .info-cards {
       grid-template-columns: repeat(2, 1fr);
-   }   
+   }
 }
 
 .info-card {
