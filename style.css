@@ -1,11 +1,14 @@
+*, *::after, *::before {
+  box-sizing: border-box;
+}
+
 body {
    margin: 0;
    background-color: #f7f8fc;
    min-height: 100vh;
    height: 100%;
    display: grid;
-   /* clamp(280px, 30%, 280px) */
-   grid-template-columns:  clamp(220px, 30%, 280px) 1fr;
+   grid-template-columns: clamp(220px, 25%, 280px) 1fr;
    font-family: 'mulish', sans-serif;
 }
 
@@ -13,6 +16,7 @@ h1, h2, p {
    margin: 0;
 }
 
+/* main layout */
 main {
    grid-column-start: 2;
    display: grid;
@@ -21,13 +25,6 @@ main {
    padding-left: 1.5rem;
    padding-right: 1.5rem;
    max-height: 100%;
-
-   
-}
-
-/* temp */
-main > * {
-   /* outline: 1px solid pink; */
 }
 
 ul {
@@ -43,6 +40,7 @@ ul {
    flex-direction: column;
    background: #363740;
    color: #A4A6B3;
+   padding-top: 0.35rem;
 }
 
 .sidebar i {
@@ -80,10 +78,15 @@ header {
    padding: 1rem 0;
 }
 
+header *, header *::after {
+   box-sizing: content-box;
+}
+
 header h1 {
    font-size: 1.45rem;
    margin-top: auto;
    margin-bottom: auto;
+   color: #252733;
 }
 
 header i {
@@ -152,16 +155,47 @@ header > div {
    font-weight: 600;
 }
 
-
-
-/* info cards */
+/* info cards section */
 .info-cards {
    grid-row: 2;
    grid-column: 1 / -1;
    display: grid;
-   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+   grid-template-columns: repeat(4, 1fr);
+   gap: 1.5rem;
+   margin-top: 1rem;
 }
 
+@media (max-width: 1080px) {
+   .info-cards {
+      grid-template-columns: repeat(2, 1fr);
+   }   
+}
+
+.info-card {
+   border: 2px solid #dfe0eb;
+   border-radius: 0.5rem;
+   background: #fff;
+   text-align: center;
+   font-weight: bold;
+   padding: 1.5rem 0;
+}
+
+.info-card:last-child {
+   margin-right: 0;
+}
+
+.info-card > p:first-child {
+   color: #9fa2b4;
+   font-size: 1.1rem;
+}
+
+.info-card > p:last-child {
+   font-size: 2.25rem;
+   padding-top: 0.75rem;
+   color: #252733;
+}
+
+/* trends graph section */
 .trends {
    grid-row: 3;
    grid-column: 1 / 6;
@@ -171,11 +205,13 @@ header > div {
    width: 100%;
 }
 
+/* data container section */
 .data-container {
    grid-row: 3;
    grid-column: 6 / -1;
 }
 
+/* large cards section */
 .lg-cards {
    grid-row: 4;
    grid-column: 1 / -1;
