@@ -401,9 +401,9 @@ label::after {
    content: "";
    opacity: 0;
    position: absolute;
-   top: 31%;
+   top: 33%;
    left: 22%;
-   border: 2px solid white;
+   border: 3px solid white;
    border-top: none;
    border-right: none;
    transform: rotate(-45deg);
@@ -416,6 +416,10 @@ input[type="checkbox"]:checked + label {
    border: none;
 }
 
-input[type="checkbox"]:checked + label:after {
+input[type="checkbox"]:hover + label {
+   background: #ebeeff;
+}
+
+input[type="checkbox"]:checked + label::after {
    opacity: 1;
 }
