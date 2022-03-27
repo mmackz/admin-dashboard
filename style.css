@@ -74,7 +74,21 @@ ul {
    display: flex;
    flex-direction: column;
    height: 100%;
-   justify-content: space-between;
+}
+
+@media (min-height: 630px) {
+   .sidebar {
+      position: sticky;
+      top: 0;
+      left: 0;
+      max-height: 100vh;
+      min-height: min-content;
+      overflow: auto;
+   }
+
+   .sidebar-nav {
+      justify-content: space-between;
+   }
 }
 
 /* titlebar styles */
