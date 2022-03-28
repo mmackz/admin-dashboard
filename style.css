@@ -572,3 +572,16 @@ input[type="checkbox"]:hover:checked + label {
 input[type="checkbox"]:checked + label::after {
    opacity: 1;
 }
+
+/* make fonts/spacing smaller on small devices */
+@media (max-width: 380px) {
+   html {
+      font-size: 15px;
+   }
+}
+
+@media (max-width: 340px) {
+   html {
+      font-size: 14px;
+   }
+}
