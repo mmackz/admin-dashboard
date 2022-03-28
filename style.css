@@ -66,6 +66,19 @@ ul {
    font-weight: 400;
 }
 
+.sidebar li:hover, 
+.sidebar li:active {
+   background: #3e4049;
+   color: #dde2ff;
+   border-left: 4px solid #dde2ff;
+   padding-left: calc(1.1rem - 4px);
+}
+
+.sidebar li:hover > i, 
+.sidebar li:active > i {
+   color: #dde2ff;
+}
+
 .sidebar-nav > ul:first-child {
    padding: 0.5rem 0 0.75rem;
 }
