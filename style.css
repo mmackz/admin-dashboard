@@ -248,7 +248,8 @@ header > div {
    grid-column: 1 / -1;
    display: grid;
    grid-template-columns: repeat(4, 1fr);
-   gap: 1.5rem;
+   column-gap: 1.5rem;
+   row-gap: 1rem;
    margin-top: 1rem;
    margin-bottom: 1.5rem;
 }
@@ -284,8 +285,14 @@ header > div {
 }
 
 /* trends graph section */
-.trends {
+.trends-container {
    grid-row: 3;
+   grid-column: 1 / -1;
+   display: grid;
+   grid-template-columns: repeat(8, 1fr);
+}
+
+.trends {
    grid-column: 1 / 6;
    background: #fff;
    border: 2px solid #dfe0eb;
@@ -313,7 +320,6 @@ header > div {
 
 /* data container section */
 .data-container {
-   grid-row: 3;
    grid-column: 6 / -1;
    background: #fff;
    border: 2px solid #dfe0eb;
@@ -341,6 +347,24 @@ header > div {
    font-size: 1.5rem;
    color: #252733;
    font-weight: bold;
+}
+
+@media (max-width: 660px), (min-width: 720px) and (max-width: 920px) {
+   .trends-container {
+      grid-template-columns: 1fr;
+   }
+
+   .trends {
+      grid-column: 1 / -1;
+      border: 2px solid #dfe0eb;
+      border-radius: 0.5rem;
+   }
+
+   .data-container {
+      grid-column: 1 / -1;
+      border-radius: 0.5rem;
+      margin-top: 1.5rem;
+   }
 }
 
 /* large cards section */
@@ -480,8 +504,12 @@ input[type="checkbox"]:checked + label {
    border: none;
 }
 
-input[type="checkbox"]:hover + label {
+input[type="checkbox"]:hover:not(:checked) + label {
    background: #ebeeff;
+}
+
+input[type="checkbox"]:hover:checked + label {
+   box-shadow: 0 0 8px 0 #a0a0a0a0;
 }
 
 input[type="checkbox"]:checked + label::after {
