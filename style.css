@@ -21,6 +21,10 @@ p {
    margin: 0;
 }
 
+img {
+   user-select: none;
+}
+
 /* main layout */
 main {
    grid-column-start: 2;
@@ -38,18 +42,6 @@ ul {
 }
 
 /* sidebar styles */
-.menu-tab {
-   position: fixed;
-   width: 20px;
-   height: 100px;
-   background-color: red;
-   top: 15%;
-}
-
-.menu-tab > p {
-   transform: rotate(90deg);
-}
-
 .sidebar {
    grid-column-start: 1;
    display: flex;
@@ -57,6 +49,7 @@ ul {
    background: #363740;
    color: #a4a6b3;
    padding-top: 0.35rem;
+   user-select: none;
 }
 
 .sidebar i {
@@ -170,6 +163,7 @@ header img {
 .icons {
    border-right: 2px solid #dfe0eb;
    margin-right: 1.75rem;
+   user-select: none;
 }
 
 .fa-bell {
@@ -209,7 +203,6 @@ header > div {
 
 .user {
    grid-column-start: 2;
-   user-select: none;
 }
 
 .name {
@@ -456,6 +449,7 @@ header > div {
    font-size: 0.6875rem;
    font-weight: bold;
    text-transform: uppercase;
+   user-select: none;
 }
 
 /* checkbox styling */
