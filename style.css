@@ -73,6 +73,21 @@ ul {
 .logo-container {
    padding: 1.25rem;
    padding-bottom: 1.75rem;
+   position: relative;
+}
+
+.close-btn {
+   position: absolute;
+   top: 0.75rem;
+   right: -0.25rem;
+   font-size: 1.5rem;
+   transition: transform 300ms ease, color 300ms ease;
+   display: none !important;
+}
+
+.logo-container > i:hover {
+   color: #8f5f5f;
+   transform: scale(1.075);
 }
 
 .sidebar-nav {
@@ -125,12 +140,19 @@ ul {
       transition: transform 350ms ease-in-out;
       transform: translateX(-100%);
    }
+
+   .open {
+      transform: translateX(0);
+   }
+
+   .close-btn {
+      display: inline-block !important;
+   }
 }
 
 @media (max-width: 740px) and (max-height: 610px) {
    .sidebar {
       position: absolute;
-      min-height: 2000px;
    }
 }
 
