@@ -38,6 +38,18 @@ ul {
 }
 
 /* sidebar styles */
+.menu-tab {
+   position: fixed;
+   width: 20px;
+   height: 100px;
+   background-color: red;
+   top: 15%;
+}
+
+.menu-tab > p {
+   transform: rotate(90deg);
+}
+
 .sidebar {
    grid-column-start: 1;
    display: flex;
@@ -76,6 +88,22 @@ ul {
    height: 100%;
 }
 
+.hamburger {
+   display: none;
+   position: absolute;
+   left: 1.5rem;
+   top: 1.85rem;
+   cursor: pointer;
+}
+
+.hamburger > div {
+   width: 25px;
+   height: 3px;
+   background: #252733;
+   margin: 6px 0;
+   border-radius: 2px;
+}
+
 @media (min-height: 630px) {
    .sidebar {
       position: sticky;
@@ -88,6 +116,17 @@ ul {
 
    .sidebar-nav {
       justify-content: space-between;
+   }
+}
+
+@media (max-width: 740px) {
+   body {
+      grid-template-columns: 1fr;
+   }
+
+   .sidebar {
+      display: none;
+      width: 0;
    }
 }
 
@@ -170,12 +209,37 @@ header > div {
 
 .user {
    grid-column-start: 2;
+   user-select: none;
 }
 
 .name {
    font-size: 0.875rem;
    color: #252733;
    font-weight: 600;
+}
+
+@media (max-width: 740px) {
+   .hamburger {
+      display: block;
+   }
+
+   header > h1 {
+      margin-left: 2.5rem;
+   }
+}
+
+@media (max-width: 580px) {
+   header {
+      grid-template-columns: 1fr 1fr;
+   }
+
+   .icons {
+      display: none;
+   }
+
+   .user {
+      justify-content: flex-end;
+   }
 }
 
 /* info cards section */
