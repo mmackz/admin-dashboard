@@ -66,16 +66,14 @@ ul {
    font-weight: 400;
 }
 
-.sidebar li:hover, 
-.sidebar li:active {
+.sidebar li:hover {
    background: #3e4049;
    color: #dde2ff;
    border-left: 4px solid #dde2ff;
    padding-left: calc(1.1rem - 4px);
 }
 
-.sidebar li:hover > i, 
-.sidebar li:active > i {
+.sidebar li:hover > i {
    color: #dde2ff;
 }
 
@@ -194,6 +192,11 @@ header i {
    color: #c5c7cd;
    font-size: 1.1rem;
    padding: 0.35rem;
+   cursor: pointer;
+}
+
+header i:hover {
+   color: #bdc5db;
 }
 
 header i:last-child {
@@ -204,6 +207,12 @@ header i:last-child {
 header img {
    width: 43px;
    border-radius: 50%;
+   transition: box-shadow 500ms ease;
+   cursor: pointer;
+}
+
+header img:hover {
+   box-shadow: 0 0 8px 0 blue;
 }
 
 .icons {
@@ -308,6 +317,10 @@ header > div {
    padding: 1.5rem 0;
 }
 
+.info-card:hover {
+   box-shadow: inset 0 0 0 2px #3751ff;
+}
+
 .info-card:last-child {
    margin-right: 0;
 }
@@ -321,6 +334,10 @@ header > div {
    font-size: 2.25rem;
    padding-top: 0.75rem;
    color: #252733;
+}
+
+.info-card:hover > p {
+   color: #3751ff;
 }
 
 /* trends graph section */
