@@ -482,6 +482,12 @@ header > div {
    font-size: 0.875rem;
    font-weight: 600;
    text-decoration: none;
+   transition: transform 0.25s ease-in-out;
+}
+
+.card-title > a:hover,
+.card-title > a:focus {
+   transform: scale(1.04);
 }
 
 .card-header ~ div {
