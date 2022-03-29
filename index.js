@@ -6,7 +6,6 @@ const closeBtn = document.querySelector(".close-btn");
 menu.addEventListener("click", (event) => {
    event.stopPropagation();
    sidebar.classList.toggle("open");
-   document.body.style.overflow = "hidden";
    setSidebarHeight();
 });
 
@@ -19,7 +18,6 @@ sidebar.addEventListener("click", (event) => {
 document.body.addEventListener("click", () => {
    if (sidebar.classList.contains("open")) {
       sidebar.classList.remove("open");
-      document.body.style = "";
    }
 });
 
@@ -27,7 +25,6 @@ document.body.addEventListener("click", () => {
 closeBtn.addEventListener("click", () => {
    if (sidebar.classList.contains("open")) {
       sidebar.classList.remove("open");
-      document.body.style = "";
    }
 });
 
@@ -40,7 +37,7 @@ function setSidebarHeight() {
    const size = document.body.getBoundingClientRect();
    const windowHeight = window.innerHeight;
    if (size.width <= 740 && windowHeight <= 610) {
-      sidebar.style.minHeight = windowHeight + "px";
+      sidebar.style.minHeight = size.height + "px";
    } else {
       sidebar.style = "";
    }
