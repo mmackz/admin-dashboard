@@ -11,7 +11,6 @@ body {
    height: 100%;
    display: grid;
    grid-template-columns: clamp(220px, 25%, 280px) 1fr;
-   /* grid-template-columns: 0px 1fr; */
    font-family: "mulish", sans-serif;
 }
 
@@ -50,6 +49,7 @@ ul {
    color: #a4a6b3;
    padding-top: 0.35rem;
    user-select: none;
+   position: relative;
 }
 
 .sidebar i {
@@ -123,6 +123,16 @@ ul {
    border-radius: 2px;
 }
 
+.fill-bottom {
+   display: none;
+   position: absolute;
+   width: 100%;
+   height: 70px;
+   left: 0;
+   bottom: -70px;
+   background: #363740;
+}
+
 @media (min-height: 620px) {
    .sidebar {
       position: sticky;
@@ -130,7 +140,6 @@ ul {
       left: 0;
       max-height: 100vh;
       min-height: min-content;
-      overflow: hidden;
    }
 
    .sidebar-nav {
@@ -164,6 +173,12 @@ ul {
 @media (max-width: 740px) and (max-height: 610px) {
    .sidebar {
       position: absolute;
+   }
+}
+
+@media (max-width: 740px) and (min-height: 611px) {
+   .fill-bottom {
+      display: block;
    }
 }
 
