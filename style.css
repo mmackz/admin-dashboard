@@ -512,6 +512,7 @@ header > div {
    font-size: 0.875rem;
    font-weight: 600;
    color: #252733;
+   max-height: 3.5rem;
    padding: 1.15rem 1.75rem;
    display: flex;
    justify-content: space-between;
